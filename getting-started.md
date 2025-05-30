@@ -24,7 +24,7 @@ Participants should have the following prerequisites:
 
 - **Familiarity with Azure Resources:** Basic understanding of Azure services and the Azure portal for managing cloud resources.
 
-- **Knowledge of python:** Familiarity with python.
+- **Knowledge of python:** Familiarity working with python.
 
 ## Architecture
 
@@ -36,15 +36,15 @@ The architecture enables end-to-end knowledge-augmented chatbot development by s
 
 The architecture for this lab involves several key components:
 
-- **Copilot Studio:** Facilitates user interaction by connecting to Azure AI Search for Q&A and other workflows. It provides an intuitive interface for leveraging indexed data and AI capabilities in real-time.
+- **Azure AI Search:** Serves as the core indexing and retrieval engine for your chatbot. It ingests documents and images, applies built-in cognitive skills like OCR and text extraction, and enables fast semantic search over your content. LangChain connects to Azure AI Search to retrieve the most relevant content snippets during chatbot interactions.
 
-- **Zendesk:** Manages support and exception workflows by exposing ticket‑creation and incident‑management APIs. The Copilot Studio agent invokes Zendesk actions to automatically open, update, and track service tickets based on user requests or operational alerts.
+- **Azure OpenAI:** Provides large language models (LLMs) such as GPT-4, which power the chatbot's natural language understanding and generation. Integrated through LangChain, Azure OpenAI generates accurate, grounded responses by synthesizing user queries with content retrieved from Azure AI Search.
 
-- **Dataverse:** Acts as the centralized, low‑code data backend for transactional records. It stores order entries, inventory updates, and other structured data; the Copilot Studio agent uses Dataverse actions to create, read, update, and delete records as part of automated store‑operations workflows.
+- **Visual Studio Code:** Acts as the primary development environment for building, testing, and debugging your LangChain-powered chatbot. With built-in terminal support and extensions for Python, Azure, and Streamlit, Visual Studio Code streamlines the entire development workflow—from writing LangChain scripts to launching a local chatbot interface.
 
 ## Getting Started with Lab
 
-Welcome to Store Operations with Microsoft Copilot Studio Hands-On-Lab! , We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
+Welcome to Knowledge-Augmented Chatbot with LangChain & Azure AI Search Hands-On-Lab! , We've prepared a seamless environment for you to explore and learn. Let's begin by making the most of this experience.
 
 ### Accessing Your Lab Environment
 
