@@ -188,14 +188,6 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
 
    ![](./media/ex2img26.png)
 
-1. From the overview pane, click on **Go to
-
-   ![](./media/ex2img27.png)
-
-1. From the top menu, select **...** and click on **Terminal** and from the list, select **New terminal**.
-
-   ![](./media/ex2img13.png)
-
 1. From the overview page, click on **Go to Azure AI Foundry Portal**.
 
    ![](./media/ex2img14.png)
@@ -207,18 +199,6 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
 1. Once opened, scroll down and search for the code implementation part. Verify the **api_version** value in your `.env` file is same as the value sown in the portal, if not update the value to the value, shown in the portal.
 
    ![](./media/ex2img16.png)
-
-1. In the same portal, scroll up and use the **copy icon** to copy the **Key** and add it in the `.env` file for the respected key. 
-
-   ![](./media/ex2img17.png)
-
-1. Once done, navigate back to resource group. From the resource list, select **aisearch-<inject key="Deployment ID" enableCopy="false"/>** AI Search service.
-
-   ![](./media/ex2img19.png)
-
-1. Once you are in the overview pane, select **Keys (1)** under **Settings** and use the **Copy Icon (2)** to copy the **Primary admin key**. Add the copied value in the `.env` file for its respected key.
-
-   ![](./media/ex2img20.png)
 
 1. Once done the `.env` file will look similar to this.
 
