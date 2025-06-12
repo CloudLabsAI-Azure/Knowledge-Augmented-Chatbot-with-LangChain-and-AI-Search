@@ -6,6 +6,8 @@
 
 In this exercise, you will prepare your data foundation by uploading sample PDFs and images to Azure Blob Storage, and configuring Azure AI Search to ingest and process them. Using built-in OCR and text extraction capabilities, Azure AI Search will enrich the content and generate a searchable index. This indexed data will serve as the knowledge base for your chatbot, enabling grounded, document-aware responses in later exercises.
 
+**Azure AI Search** service is a tool that uses artificial intelligence to quickly find and retrieve relevant information from large datasets, like documents or databases. It understands user queries, even if they're vague, and delivers accurate results by analyzing content and context. Think of it as a super-smart librarian who instantly finds the right books for you. For example, Azure AI Search can search invoices by customer name or product, making data retrieval fast and intuitive.
+
 ## Objectives
 
 You will be able to complete the following tasks:

@@ -6,6 +6,16 @@
 
 In this exercise, you will integrate Azure AI Search with LangChain by wrapping your search index as a retriever and building a RetrievalQA chain powered by Azure OpenAI. These steps will enable your chatbot to fetch relevant context from indexed content and use it to generate accurate, grounded responses.
 
+**LangChain** is a framework that simplifies building AI applications by connecting language models (like those from OpenAI) with external data, tools, and memory. It enables developers to create context-aware, interactive apps that can retrieve information, process queries, and maintain conversation history.
+
+How it Helps in AI Application Development:
+
+- **Data Integration:** Combines LLMs with external data sources (e.g., documents, databases) for accurate, context-rich responses.
+- **Tool Access:** Allows AI to use tools like search or APIs, enhancing functionality (e.g., invoice lookup).
+- **Memory Management:** Maintains conversation history for coherent, personalized interactions.
+- **Simplified Workflow:** Provides pre-built components (e.g., retrievers, chains) to speed up development.
+- **Flexibility:** Supports custom workflows, making it easier to build complex AI apps, like chatbots or Q&A systems, with minimal coding.
+
 ## Objectives
 
 You will be able to complete the following tasks:
@@ -178,11 +188,15 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
 
    ![](./media/ex2img26.png)
 
-1. Navigate to the **openai-<inject key="Deployment ID" enableCopy="false"/>** Azure OpenAI Service from the resource list.
+1. From the overview pane, click on **Go to
+
+   ![](./media/ex2img27.png)
+
+1. From the top menu, select **...** and click on **Terminal** and from the list, select **New terminal**.
 
    ![](./media/ex2img13.png)
 
-1. From the overview page, click on **Go to Azure AI FOundry Portal**.
+1. From the overview page, click on **Go to Azure AI Foundry Portal**.
 
    ![](./media/ex2img14.png)
 
