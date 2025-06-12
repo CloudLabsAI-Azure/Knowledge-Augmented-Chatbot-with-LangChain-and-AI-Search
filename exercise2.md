@@ -36,7 +36,7 @@ In this task, you will install the necessary LangChain community package and imp
 
    ![](./media/ex2img21.png)
 
-1. From the open folder pane, navigate to `C:\codefiles` and click on open folder.
+1. From the open folder pane, navigate to `C:\codefiles\Knowledge-Augmented-Chatbot-with-LangChain-and-AI-Search-datasets` and click on open folder.
 
 1. In the pop up window click on Trust.
 
