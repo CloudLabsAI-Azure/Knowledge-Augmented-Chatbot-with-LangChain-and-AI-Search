@@ -176,13 +176,13 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
    ```
    # Azure OpenAI Configuration
    AZURE_OPENAI_ENDPOINT=https://openai-<inject key="Deployment ID" enableCopy="false"/>.openai.azure.com/
-   AZURE_OPENAI_KEY=
+   AZURE_OPENAI_KEY=<inject key="OpenAI API Key" enableCopy="false"/>
    AZURE_OPENAI_DEPLOYMENT=gpt-35-turbo
    AZURE_OPENAI_API_VERSION=2024-12-01-preview
 
    # Azure AI Search Configuration
    AZURE_SEARCH_ENDPOINT=https://aisearch-<inject key="Deployment ID" enableCopy="false"/>.search.windows.net
-   AZURE_SEARCH_KEY=
+   AZURE_SEARCH_KEY=<inject key="AI Search Service Key" enableCopy="false"/>
    AZURE_SEARCH_INDEX_NAME=invoice-index
    ```
 
