@@ -20,6 +20,47 @@ You will be able to complete the following tasks:
 
 In this task, you will select a Structured Agent using LangChain’s create_react_agent function and register your Search and OCR tools. This will allow the agent to dynamically choose tools based on user input and execute them in sequence.
 
+1. Navigate to the **Visual Studio Code** window, which you opened in the previous exercise.
+
+1. Once you are in the **Visual Studio Code**, from the explorer, select `exercise3_agent_memory` file.
+
+1. Once opened, navigate to `# Task 1: Choose & Configure an Agent` comment.
+
+   ![](./media/ex2img3.png)
+
+1. Add the following code snippet under the comment.
+
+   ```python
+   class InvoiceAgent:
+    """Structured agent with tool access and memory"""
+    
+    def __init__(self, enable_memory=True, enable_callbacks=True):
+        # Initialize LLM
+        self.llm = AzureChatOpenAI(
+            azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+            api_key=os.getenv("AZURE_OPENAI_KEY"),
+            azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT"),
+            api_version=os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-01"),
+            temperature=0.1
+        )
+        
+        # Initialize tools
+        self.search_tool = InvoiceSearchTool()
+        self.retrieval_qa = InvoiceRetrievalQA()
+        self.ocr_tool = OCRTool()
+        
+        # Create tools list
+        self.tools = [
+            self.search_tool.get_langchain_tool(),
+            Tool(
+                name="qa_retrieval",
+                description="Answer detailed questions about invoices using retrieval and AI analysis. Use this for complex questions that need contextual understanding and reasoning.",
+                func=self._qa_tool_wrapper
+            ),
+            self.ocr_tool.get_langchain_tool()
+        ]
+
+
 ## Task 2: Add Conversation Memory
 
 In this task, you will add ConversationBufferMemory to your agent so it can retain and reference prior conversation turns. This enables more natural, context-aware dialogue where earlier inputs influence future responses.

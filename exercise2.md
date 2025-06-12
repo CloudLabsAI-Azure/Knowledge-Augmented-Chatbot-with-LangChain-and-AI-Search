@@ -24,15 +24,21 @@ In this task, you will install the necessary LangChain community package and imp
 
 1. From the top menu, click on **file** and select **Open Folder** option.
 
-1. From the open folder pane, navigate to `C:\langchain-codefiles` and click on open folder.
+   ![](./media/ex2img21.png)
+
+1. From the open folder pane, navigate to `C:\codefiles` and click on open folder.
 
 1. In the pop up window click on Trust.
 
 1. Now, you can see that there are some files present in this folder. In these further tasks, you will complete these code files.
 
+   ![](./media/ex2img22up.png)
+
 1. From the **explorer**, select and open `exercise2_retrieval.py`.
 
 1. Once you are in the file, review the file once then navigate to **Task 1: Implement Search Retriever Tool** comment.
+
+   ![](./media/ex2img4.png)
 
 1. Under the comment, add the following code snippet.
 
@@ -77,13 +83,21 @@ In this task, you will install the necessary LangChain community package and imp
 
    >Use it to find specific invoices, customer details, products, or financial data efficiently.
 
+1. Once done, the file should look like this, verify it and use **CTRL + S** to save the file.
+
+   ![](./media/ex2img5.png)
+
 ## Task 2: Build RetrievalQA Chain
 
 In this task, you will create a RetrievalQA chain by connecting your search retriever to an Azure OpenAI language model. You will configure the chain to retrieve top-k search snippets and pass them along with user queries to the model, enabling the chatbot to provide informed, relevant answers.
 
 1. Once the Search Retriever Tool is implemented, the next step is to create a chain that combines the retrieved data and passes it to the LLM. The LLM will then process this input and return a meaningful response.
 
-1. In the same file, scroll down to the comment - **Task 2: Build RetrievalQA Chain** and add the provided snippet under that.
+1. In the same file, scroll down to the comment - **Task 2: Build RetrievalQA Chain**.
+
+   ![](./media/ex2img8.png)
+
+1. Below the comment, add the provided code snippet to implement RetrivalQA chain.
 
     ```python
     class InvoiceRetrievalQA:
@@ -137,9 +151,15 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
 
    >This class provides an efficient way to get detailed, context-based answers to invoice-related queries.
 
-1. Once done editing, use **CTRL + S** to save the file.
+1. Once done editing, verify that the snippet looks like this and use **CTRL + S** to save the file.
+
+   ![](./media/ex2img6.png)
 
 1. Now, use the create option and create file with name `.env`.
+
+   ![](./media/ex2img24.png)
+
+   ![](./media/ex2img25.png)
 
 1. Once created, add the following content.
 
@@ -148,7 +168,7 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
    AZURE_OPENAI_ENDPOINT=https://openai-<inject key="Deployment ID" enableCopy="false"/>.openai.azure.com/
    AZURE_OPENAI_KEY=
    AZURE_OPENAI_DEPLOYMENT=gpt-35-turbo
-   AZURE_OPENAI_API_VERSION=
+   AZURE_OPENAI_API_VERSION=2024-12-01-preview
 
    # Azure AI Search Configuration
    AZURE_SEARCH_ENDPOINT=https://aisearch-<inject key="Deployment ID" enableCopy="false"/>.search.windows.net
@@ -156,13 +176,69 @@ In this task, you will create a RetrievalQA chain by connecting your search retr
    AZURE_SEARCH_INDEX_NAME=invoice-index
    ```
 
-1. Navigate to the **openai-<inject key="Deployment ID" enableCopy="false"/>** Azure OpenAI Service.
+   ![](./media/ex2img26.png)
 
-1. From the top menu, select **...** and click on **Terminal** and from the list, select **New terminal**.
+1. Navigate to the **openai-<inject key="Deployment ID" enableCopy="false"/>** Azure OpenAI Service from the resource list.
+
+   ![](./media/ex2img13.png)
+
+1. From the overview page, click on **Go to Azure AI FOundry Portal**.
+
+   ![](./media/ex2img14.png)
+
+1. You will be navigated to **Azure AI Foundry Portal**. Select the **Deployments (1)** from left menu and click on **gpt-25-turbo (2)**.
+
+   ![](./media/ex2img15.png)
+
+1. Once opened, scroll down and search for the code implementation part. Verify the **api_version** value in your `.env` file is same as the value sown in the portal, if not update the value to the value, shown in the portal.
+
+   ![](./media/ex2img16.png)
+
+1. In the same portal, scroll up and use the **copy icon** to copy the **Key** and add it in the `.env` file for the respected key. 
+
+   ![](./media/ex2img17.png)
+
+1. Once done, navigate back to resource group. From the resource list, select **aisearch-<inject key="Deployment ID" enableCopy="false"/>** AI Search service.
+
+   ![](./media/ex2img19.png)
+
+1. Once you are in the overview pane, select **Keys (1)** under **Settings** and use the **Copy Icon (2)** to copy the **Primary admin key**. Add the copied value in the `.env` file for its respected key.
+
+   ![](./media/ex2img20.png)
+
+1. Once done the `.env` file will look similar to this.
+
+   ![](./media/ex2img27.png)
+
+1. From the top menu, select **... (1)** and click on **Terminal  (2)** and from the list, select **New terminal  (3)**.
+
+   ![](./media/ex2img23.png)
 
 1. Run the following command in the terminal to install all the requirements.
 
-1. 
+   ```
+   pip install -r requirements.txt
+   ```
+
+   ![](./media/ex2img28.png)
+
+   ![](./media/ex2img29.png)
+
+1. Once the requirements are satisfied, run the following command in the terminal to run the retriever.
+
+   ```
+   python exercise2_retrieval.py
+   ```
+
+   ![](./media/ex2img30.png)
+
+1. Once you run it, you'll see the results. In the first step, the retriever fetches the relevant documents. In the next step, the LLM processes these documents and generates a meaningful answer based on the example prompts provided in the code files.
+
+   ![](./media/ex2img31.png)
+
+   ![](./media/ex2img32.png)
+
+1. Now you have successfully completed the RetrievalQA Chain.
 
 ## Summary
 
