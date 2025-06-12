@@ -32,6 +32,8 @@ The architecture enables end-to-end knowledge-augmented chatbot development by s
 
 ## Architecture Diagram
 
+![](./media/arch.png)
+
 ## Explanation of Components
 
 The architecture for this lab involves several key components:
@@ -41,6 +43,8 @@ The architecture for this lab involves several key components:
 - **Azure OpenAI:** Provides large language models (LLMs) such as GPT-4, which power the chatbot's natural language understanding and generation. Integrated through LangChain, Azure OpenAI generates accurate, grounded responses by synthesizing user queries with content retrieved from Azure AI Search.
 
 - **Visual Studio Code:** Acts as the primary development environment for building, testing, and debugging your LangChain-powered chatbot. With built-in terminal support and extensions for Python, Azure, and Streamlit, Visual Studio Code streamlines the entire development workflow—from writing LangChain scripts to launching a local chatbot interface.
+
+- **Langchain:** is a framework that simplifies building AI applications by connecting language models (like those from OpenAI) with external data, tools, and memory. It enables developers to create context-aware, interactive apps that can retrieve information, process queries, and maintain conversation history.
 
 ## Getting Started with Lab
 

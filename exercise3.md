@@ -6,6 +6,10 @@
 
 In this exercise, you will assemble a LangChain agent that can plan, remember, and explain its actions. You will configure a structured agent with tool access, integrate memory to support multi-turn dialogue, and instrument callbacks to trace and debug each step of the agent’s reasoning.
 
+An **AI agent** is a software program designed to act on behalf of a user or another system. It can perform tasks, make decisions, or automate processes independently. Essentially, it’s like a digital assistant that understands queries, takes actions, and may even learn from interactions to improve over time. For example, a chatbot that answers your questions or an AI in an invoice system that finds specific invoices qualifies as an AI agent.
+
+**Contextual memory** refers to an AI system’s ability to retain and recall information from previous interactions or contexts. This capability allows the AI to deliver more personalized and relevant responses by leveraging the history of a conversation or a user’s past behavior. For instance, if you ask a chatbot about your invoices and later ask a follow-up question, contextual memory enables it to remember the earlier discussion and respond coherently.
+
 ## Objectives
 
 You will be able to complete the following tasks:
